@@ -16,6 +16,16 @@ class PostsController extends Controller
     return view('posts.create');
   }
 
+  public function show(\App\Post $post)
+  {
+    // dd($post);
+    // $post = Post::findOrFail($id); // return 404 if not found
+    // return view('posts.show', [
+    //   'post' => $post,
+    // ]);
+    return view('posts.show', compact('post'));
+  }
+
   public function store() {
     $data = request()->validate([
       // 'notMandatoryField' => '' // field no validation, need to pass empty string
