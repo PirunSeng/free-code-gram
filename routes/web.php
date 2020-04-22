@@ -27,3 +27,5 @@ Route::patch('/profiles/{user}', 'ProfilesController@update')->name('profile.upd
 Route::get('/p/create', 'PostsController@create');
 Route::get('/p/{post}', 'PostsController@show');
 Route::post('/p', 'PostsController@store');
+
+Route::post('follow/{user}', 'FollowsController@store');
