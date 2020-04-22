@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
       <div class="col-3 py-2 px-5">
-        <img src="https://instagram.fpnh6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/83213956_3360255157381124_5752385570823208960_n.jpg?_nc_ht=instagram.fpnh6-1.fna.fbcdn.net&_nc_ohc=WRZiGolUlLQAX9sb4C8&oh=9497dc467c619f61f1698e67452194f5&oe=5EA72FBA" class="rounded-circle">
+        <img class="w-100 rounded-circle" src="/storage/{{ $user->profile->image }}" alt="">
       </div>
       <div class="col-9">
         <div class="d-flex justify-content-between align-items-baseline">

@@ -48,7 +48,7 @@
           @enderror
       </div>
     </div>
-    {{-- <div class="form-group row">
+    <div class="form-group row">
       <label for="image" class="col-md-4 col-form-label">Profile image</label>
       <div class="col-md-6">
           <input id="image" type="file" class="form-control-file @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" required>
@@ -59,7 +59,7 @@
               </span>
           @enderror
       </div>
-    </div> --}}
+    </div>
     <div class="row pt-4">
       <button class="btn btn-primary">Update Profile</button>
     </div>

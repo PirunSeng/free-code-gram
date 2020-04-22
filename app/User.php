@@ -41,6 +41,17 @@ class User extends Authenticatable
       return $this->hasOne(Profile::class);
     }
 
+    protected static function boot() {
+      parent::boot();
+
+      // this func gets called after the object is created. It works like after_save in Rails.
+      static::created(function ($user) {
+        $user->profile()->create([
+          'title' => $user->username
+        ]);
+      });
+    }
+
     public function posts() {
       return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
     }
