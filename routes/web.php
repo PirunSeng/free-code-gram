@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Mail\NewUserWelcomeMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
+
+Route::get('/email', function() {
+  return new NewUserWelcomeMail();
+});
 
 Route::get('/profiles/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profiles/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
