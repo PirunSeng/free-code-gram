@@ -24,6 +24,7 @@ Route::get('/profiles/{user}/edit', 'ProfilesController@edit')->name('profile.ed
 Route::patch('/profiles/{user}', 'ProfilesController@update')->name('profile.update');
 
 // order of routes matter. e.g create cannot come after show or it will be considered as show, 404.
+Route::get('/', 'PostsController@index');
 Route::get('/p/create', 'PostsController@create');
 Route::get('/p/{post}', 'PostsController@show');
 Route::post('/p', 'PostsController@store');
